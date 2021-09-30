@@ -26,6 +26,14 @@ TBD
 
 ### Services
 #### UserService
+
+
+<img src="./uml/UserService.png">
+
+#### ResourceService
+
+<img src="./uml/ResourceService.png">
+
 ### Unit Tests
 
 * If event is trying to be created at a past date: Return error, tell user to select future date.
@@ -34,13 +42,6 @@ TBD
 * If user is trying to access share link for future or current event: Return success, add user to event roster and update database as needed.
 * If an event organizer creates an event: Return success, update database with new event.
 * If a standard user creates an event: Return error, only event organizers can create events. 
-
-
-<img src="./uml/UserService.png">
-
-#### ResourceService
-
-<img src="./uml/ResourceService.png">
 
 ## Scrum Roles
 
