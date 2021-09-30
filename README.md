@@ -26,6 +26,15 @@ TBD
 
 ### Services
 #### UserService
+### Unit Tests
+
+* If event is trying to be created at a past date: Return error, tell user to select future date.
+* If event is being created for current day or future day: Return succuss, create event and update database.
+* If user it trying to access a share link for a past event: Return error, unable to accept invitation for an event that already occurred.
+* If user is trying to access share link for future or current event: Return success, add user to event roster and update database as needed.
+* If an event organizer creates an event: Return success, update database with new event.
+* If a standard user creates an event: Return error, only event organizers can create events. 
+
 
 <img src="./uml/UserService.png">
 
