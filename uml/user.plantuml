@@ -1,0 +1,27 @@
+@startuml
+entity User {
+  Int userId
+  String name
+  String username
+  String password
+  String role
+}
+
+entity Resource {
+  Int resourceId
+  String title
+  String description
+}
+
+class UserService {
+  User login(String username, String password)
+  User register(String name, String username, String password, String role)
+  List<User> getUsers()
+  Boolean checkPermission(Int userId, String role)
+}
+
+class ResourceService {
+  Resource createResource(String title, String description)
+  List<Resource> getResources()
+}
+@enduml

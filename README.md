@@ -18,14 +18,20 @@ TBD
 ### Models
 #### User
 
-#### Event
+<img src="./uml/User.png">
 
 #### Resource
+
+<img src="./uml/Resource.png">
 
 ### Services
 #### UserService
 
-#### EventService
+<img src="./uml/UserService.png">
+
+#### ResourceService
+
+<img src="./uml/ResourceService.png">
 
 ## Scrum Roles
 
