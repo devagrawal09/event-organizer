@@ -4,7 +4,7 @@
 This is an application that event organizers can use to share resources with event participants.
 
 ## Storyboard
-TBD
+<img src="./uml/mockup.png">
 
 ## User stories
 
