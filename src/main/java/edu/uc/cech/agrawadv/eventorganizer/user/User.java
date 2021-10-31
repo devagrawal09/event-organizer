@@ -3,6 +3,7 @@ package edu.uc.cech.agrawadv.eventorganizer.user;
 import java.util.UUID;
 
 public class User {
+	
     private UUID userId;
     private String name;
     private String username;
