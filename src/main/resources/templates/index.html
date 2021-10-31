@@ -16,10 +16,13 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    
+    <link rel="stylesheet" type="text/css" href="main.css" >
 </head>
 <body>
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
+<div class="container">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+    <!-- <div class="container"> -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
@@ -27,7 +30,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Event organizer</a>
+            <a class="navbar-brand" href="#">Event Organizer</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <form class="navbar-form navbar-right">
@@ -40,16 +43,15 @@
                 <button type="submit" class="btn btn-success">Sign in</button>
             </form>
         </div><!--/.navbar-collapse -->
-    </div>
-</nav>
-<div class="jumbotron">
-    <div class="container">
-        <h1>Hello, [user]!</h1>
+    <!-- </div> -->
+	</nav>
+	<div class="jumbotron">
+    <!-- <div class="container">  -->        
+    	<h1>Hello, <a value="${userResource.name}"></a>!</h1>
         <p>This is an app developed to help with organizing events.</p>
-    </div>
-</div>
-<div class="container">
-    <button type="button" class="btn btn-primary">Edit resource</button>
+        <button type="button" class="btn btn-primary">Edit resource</button>
+    <!-- </div> -->
+	</div>
 </div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
