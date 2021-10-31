@@ -5,9 +5,10 @@ import java.util.Optional;
 import java.util.UUID;
 
 public class UserService {
+	
     private HashMap<UUID, User> users = new HashMap<>();
 
-    User findUser(UUID userId) {
+    User findUserById(UUID userId) {
         return users.get(userId);
     }
 

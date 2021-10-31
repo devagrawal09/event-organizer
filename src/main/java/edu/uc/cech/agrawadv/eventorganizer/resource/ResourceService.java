@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.UUID;
 
 public class ResourceService {
+	
     private HashMap<UUID, Resource> resources = new HashMap<>();
 
     Resource findResource(UUID resourceId) {
