@@ -2,7 +2,10 @@ package edu.uc.cech.agrawadv.eventorganizer.resource;
 
 import java.util.UUID;
 
-public class Resource {
+import edu.uc.cech.agrawadv.eventorganizer.event.Event;
+
+public class Resource {	
+	
     private UUID resourceId;
     private String title;
     private String description;
@@ -11,13 +14,7 @@ public class Resource {
         this.resourceId = UUID.randomUUID();
         this.title = title;
         this.description = description;
-    }
-
-    public Resource(UUID resourceId, String title, String description) {
-        this.resourceId = resourceId;
-        this.title = title;
-        this.description = description;
-    }
+    }    
 
     public UUID getResourceId() {
         return resourceId;
