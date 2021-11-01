@@ -5,13 +5,14 @@ import java.util.Optional;
 import java.util.UUID;
 
 public class UserService {
-    private HashMap<UUID, User> users = new HashMap<>();
+	
+    private static HashMap<UUID, User> users = new HashMap<>();
 
-    User findUser(UUID userId) {
+    public static User findUser(UUID userId) {
         return users.get(userId);
     }
 
-    Optional<User> findUserByUsername(String username) {
+    public static Optional<User> findUserByUsername(String username) {
         return users
                 .values()
                 .stream()
@@ -19,7 +20,12 @@ public class UserService {
                 .findFirst();
     }
 
-    void saveUser(User user) {
+    public static void saveUser(User user) {
         users.put(user.getUserId(), user);
+    }
+    
+    public static boolean login(String username, String password) {
+    	Optional<User> user = findUserByUsername(username);
+    	return user.isPresent() && user.get().checkPassword(password);    	
     }
 }
