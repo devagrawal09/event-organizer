@@ -15,7 +15,7 @@ public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "userid")
-	private UUID userId;
+	private int userId;
 	@Column(name = "name")
 	private String name;
 	@Column(name = "username")
@@ -25,15 +25,11 @@ public class User {
 	@Column(name = "role")
 	private String role;
 
-	public User(String name, String username, String password, String role) {
-		this.userId = UUID.randomUUID();
-		this.name = name;
-		this.username = username;
-		this.password = password;
-		this.role = role;
+	public User() {
+
 	}
 
-	public User(UUID userId, String name, String username, String password, String role) {
+	public User(int userId, String name, String username, String password, String role) {
 		this.userId = userId;
 		this.name = name;
 		this.username = username;
@@ -47,7 +43,7 @@ public class User {
 				+ ", role=" + role + "]";
 	}
 
-	public UUID getUserId() {
+	public int getUserId() {
 		return userId;
 	}
 

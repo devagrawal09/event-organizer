@@ -26,7 +26,7 @@ public class UserController {
 		// add faculties to the spring model
 		theModel.addAttribute("user", theUsers);
 
-		return "list-users";
+		return "index";
 	}
 
 }
