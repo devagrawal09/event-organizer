@@ -1,17 +1,18 @@
 package edu.uc.cech.agrawadv.eventorganizer.user;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
-public class UserService {
-    private HashMap<UUID, User> users = new HashMap<>();
+public interface UserService {
+    public HashMap<UUID, User> users = new HashMap<>();
 
-    User findUser(UUID userId) {
+    public static User findUser(UUID userId) {
         return users.get(userId);
     }
 
-    Optional<User> findUserByUsername(String username) {
+    public static Optional<User> findUserByUsername(String username) {
         return users
                 .values()
                 .stream()
@@ -19,7 +20,9 @@ public class UserService {
                 .findFirst();
     }
 
-    void saveUser(User user) {
-        users.put(user.getUserId(), user);
+     static void saveUser(User user) {
+    	 //TODO
     }
+     
+     public List<User> findAll();
 }
