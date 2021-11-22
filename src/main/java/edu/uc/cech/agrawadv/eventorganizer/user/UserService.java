@@ -6,7 +6,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 public interface UserService {
-    public HashMap<UUID, User> users = new HashMap<>();
+    public static HashMap<UUID, User> users = new HashMap<>();
 
     public static User findUser(UUID userId) {
         return users.get(userId);
@@ -20,7 +20,7 @@ public interface UserService {
                 .findFirst();
     }
 
-     static void saveUser(User user) {
+     public static void saveUser(User user) {
     	 //TODO
     }
      

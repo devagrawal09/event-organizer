@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/events")
 public class ResourceController {
 
-	public ResourceService resourceService;
+	private ResourceService resourceService;
 
 	public ResourceController(ResourceService theResourceService) {
 		resourceService = theResourceService;

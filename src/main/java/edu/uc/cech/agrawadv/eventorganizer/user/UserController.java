@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/users")
 public class UserController {
-	public UserService userService;
+	private UserService userService;
 
 	public UserController(UserService theUserService) {
 		userService = theUserService;
