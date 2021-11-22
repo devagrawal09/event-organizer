@@ -20,7 +20,7 @@ public class ResourceController {
 	@GetMapping("/all")
 	public String listFaculties(Model theModel) {
 
-		// get faculty from db
+		// get faculty from database
 		List<Resource> theResources = resourceService.findAll();
 
 		// add faculties to the spring model

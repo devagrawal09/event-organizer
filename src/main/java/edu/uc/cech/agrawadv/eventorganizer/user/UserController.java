@@ -19,7 +19,7 @@ public class UserController {
 	@GetMapping("/all")
 	public String listFaculties(Model theModel) {
 
-		// get faculty from db
+		// get faculty from database
 		List<User> theUsers = userService.findAll();
 
 		// add faculties to the spring model
