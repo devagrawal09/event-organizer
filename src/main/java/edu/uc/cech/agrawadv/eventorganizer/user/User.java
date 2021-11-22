@@ -10,35 +10,40 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "users")
 public class User {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "userid")
 	private int userId;
+	
 	@Column(name = "name")
 	private String name;
+	
 	@Column(name = "username")
 	private String username;
+	
 	@Column(name = "password")
 	private String password;
+	
 	@Column(name = "role")
-	private String role;
+	private String userRole;
 
 	public User() {
 
 	}
 
-	public User(int userId, String name, String username, String password, String role) {
+	public User(int userId, String name, String username, String password, String userRole) {
 		this.userId = userId;
 		this.name = name;
 		this.username = username;
 		this.password = password;
-		this.role = role;
+		this.userRole = userRole;
 	}
 
 	@Override
 	public String toString() {
 		return "User [userId=" + userId + ", name=" + name + ", username=" + username + ", password=" + password
-				+ ", role=" + role + "]";
+				+ ", role=" + userRole + "]";
 	}
 
 	public int getUserId() {
@@ -53,8 +58,8 @@ public class User {
 		return username;
 	}
 
-	public String getRole() {
-		return role;
+	public String getuserRole() {
+		return userRole;
 	}
 
 	public Boolean checkPassword(String attempt) {

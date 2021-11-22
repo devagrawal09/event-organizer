@@ -10,12 +10,15 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "resource")
 public class Resource {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "resourceid")
 	private int resourceId;
+	
 	@Column(name = "title")
 	private String title;
+	
 	@Column(name = "description")
 	private String description;
 

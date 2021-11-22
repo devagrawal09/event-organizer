@@ -9,16 +9,21 @@ import edu.uc.cech.agrawadv.eventorganizer.dao.UserRepository;
 
 @Service
 public class UserServiceImpl implements UserService {
+	
 	private UserRepository userRepository;
 
 	@Autowired
 	public UserServiceImpl(UserRepository theUserRepository) {
+		
 		userRepository = theUserRepository;
+		
 	}
 
 	@Override
 	public List<User> findAll() {
+		
 		return userRepository.findAll();
+		
 	}
 
 }
