@@ -35,11 +35,6 @@ public class User {
 		this.role = role;
 	}
 
-	@Override
-	public String toString() {
-		return "User [userId=" + userId + ", name=" + name + ", username=" + username + ", password=" + password
-				+ ", role=" + role + "]";
-	}
 
 	public int getUserId() {
 		return userId;
@@ -59,5 +54,11 @@ public class User {
 
 	public Boolean checkPassword(String attempt) {
 		return password.equals(attempt);
+	}
+	
+	@Override
+	public String toString() {
+		return "User [userId=" + userId + ", name=" + name + ", username=" + username + ", password=" + password
+				+ ", role=" + role + "]";
 	}
 }
