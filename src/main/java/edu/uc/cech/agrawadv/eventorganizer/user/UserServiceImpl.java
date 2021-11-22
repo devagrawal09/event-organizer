@@ -14,12 +14,16 @@ public class UserServiceImpl implements UserService {
 
 	@Autowired
 	public UserServiceImpl(UserRepository theUserRepository) {
+		
 		userRepository = theUserRepository;
+		
 	}
 
 	@Override
 	public List<User> findAll() {
+		
 		return userRepository.findAll();
+		
 	}
 
 }

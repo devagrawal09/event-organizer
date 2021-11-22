@@ -27,5 +27,5 @@ public interface UserService {
     	 //TODO
     }
      
-     public List<User> findAll();
+     public List<User> findAllUsers();
 }
