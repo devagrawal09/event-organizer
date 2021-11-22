@@ -10,16 +10,21 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "users")
 public class User {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "userid")
 	private int userId;
+	
 	@Column(name = "name")
 	private String name;
+	
 	@Column(name = "username")
 	private String username;
+	
 	@Column(name = "password")
 	private String password;
+	
 	@Column(name = "role")
 	private String role;
 

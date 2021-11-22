@@ -9,16 +9,21 @@ import edu.uc.cech.agrawadv.eventorganizer.dao.ResourceRepository;
 
 @Service
 public class ResourceServiceImpl implements ResourceService {
+	
 	private ResourceRepository resourceRepository;
 
 	@Autowired
 	public ResourceServiceImpl(ResourceRepository theResourceRepository) {
+		
 		resourceRepository = theResourceRepository;
+		
 	}
 
 	@Override
 	public List<Resource> findAll() {
+		
 		return resourceRepository.findAll();
+		
 	}
 
 }

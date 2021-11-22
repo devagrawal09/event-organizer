@@ -6,10 +6,13 @@ import java.util.Optional;
 import java.util.UUID;
 
 public interface UserService {
+	
     public HashMap<UUID, User> users = new HashMap<>();
 
     public static User findUser(UUID userId) {
+    	
         return users.get(userId);
+        
     }
 
     public static Optional<User> findUserByUsername(String username) {
