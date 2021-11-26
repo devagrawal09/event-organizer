@@ -12,16 +12,16 @@ import javax.persistence.Table;
 public class Resource {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "resourceid")
+	@Column(name = "id")
 	private int resourceId;
+
 	@Column(name = "title")
 	private String title;
+
 	@Column(name = "description")
 	private String description;
 
-	public Resource() {
-
-	}
+	public Resource() {}
 
 	public Resource(int resourceId, String title, String description) {
 		this.resourceId = resourceId;

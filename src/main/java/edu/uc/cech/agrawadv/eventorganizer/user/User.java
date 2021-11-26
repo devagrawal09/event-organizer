@@ -8,23 +8,29 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "users")
+@Table(name = "user")
 public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "userid")
+	@Column(name = "id")
 	private int userId;
+
 	@Column(name = "name")
 	private String name;
+
 	@Column(name = "username")
 	private String username;
+
 	@Column(name = "password")
 	private String password;
+
 	@Column(name = "role")
 	private String role;
 
-	public User() {
+	public User() {}
 
+	public User(String username) {
+		this.username = username;
 	}
 
 	public User(int userId, String name, String username, String password, String role) {

@@ -1,6 +1,7 @@
 package edu.uc.cech.agrawadv.eventorganizer.resource;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,13 +13,23 @@ public class ResourceServiceImpl implements ResourceService {
 	private ResourceRepository resourceRepository;
 
 	@Autowired
-	public ResourceServiceImpl(ResourceRepository theResourceRepository) {
-		resourceRepository = theResourceRepository;
+	public ResourceServiceImpl(ResourceRepository resourceRepository) {
+		this.resourceRepository = resourceRepository;
 	}
 
 	@Override
 	public List<Resource> findAll() {
 		return resourceRepository.findAll();
+	}
+
+	@Override
+	public Optional<Resource> findResource(int resourceId) {
+		return resourceRepository.findById(resourceId);
+	}
+
+	@Override
+	public void saveResource(Resource resource) {
+		resourceRepository.save(resource);
 	}
 
 }
