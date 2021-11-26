@@ -59,8 +59,32 @@ public class User {
 		return username;
 	}
 
+	public String getPassword() {
+		return password;
+	}
+
 	public String getRole() {
 		return role;
+	}
+
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
 	}
 
 	public Boolean checkPassword(String attempt) {

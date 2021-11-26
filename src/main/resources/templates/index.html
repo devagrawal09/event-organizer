@@ -59,6 +59,7 @@
         <!--/.navbar-collapse -->
       </div>
     </nav>
+
     <div class="jumbotron">
       <div class="container">
         <h1>Welcome to the IT Expo!</h1>
@@ -68,6 +69,7 @@
         </p>
       </div>
     </div>
+
     <div class="container">
       <div class="row">
         <div class="col-md-6">
@@ -80,7 +82,7 @@
                 <li class="list-group-item" th:each="user : ${users}">
                   <!--/*@thymesVar id="user" type="edu.uc.cech.agrawadv.eventorganizer.user.User"*/-->
                   <span th:text="${user.getName()}"></span>
-                  <strong th:text="${user.getRole()}"></strong>)
+                  (<strong th:text="${user.getRole()}"></strong>)
                 </li>
               </ul>
             </div>
@@ -114,21 +116,20 @@
             Add resource
           </a>
         </div>
-        <p id="demo"></p>
       </div>
-
-      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-      <script
-        src="https://code.jquery.com/jquery-1.12.4.min.js"
-        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
-        crossorigin="anonymous"
-      ></script>
-      <!-- Include all compiled plugins (below), or include individual files as needed -->
-      <script
-        src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
-        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
-        crossorigin="anonymous"
-      ></script>
     </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+      integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

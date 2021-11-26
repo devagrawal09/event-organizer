@@ -36,9 +36,21 @@ public class EventOrganizerController {
         return "new-user";
     }
 
+    @PostMapping("/new-user")
+    public String newUser(@ModelAttribute("user") User user) {
+        userService.saveUser(user);
+        return "redirect:/";
+    }
+
     @GetMapping("/new-resource")
     public String newResource(Model model) {
         model.addAttribute("resource", new Resource());
         return "new-resource";
+    }
+
+    @PostMapping("/new-resource")
+    public String newResource(@ModelAttribute("resource") Resource resource) {
+        resourceService.saveResource(resource);
+        return "redirect:/";
     }
 }
